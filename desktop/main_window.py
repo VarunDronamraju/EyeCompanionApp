@@ -20,6 +20,8 @@ from .eye_tracker import EyeTracker
 from .database import SQLiteManager
 # Import the real SystemMonitor
 from .services.system_monitor import SystemMonitor
+# Import the new SessionManager
+from .services.session_manager import SessionManager, SessionType, SessionState
 
 class SystemMonitorThread(QThread):
     """Thread wrapper for real SystemMonitor to update UI"""
@@ -83,6 +85,9 @@ class MainWindow(QMainWindow):
         # Initialize database manager with user data
         self.db_manager = SQLiteManager(user_data=user_data)
         
+        # Initialize session manager with dual session support
+        self.session_manager = SessionManager(self.db_manager, user_data)
+        
         # Initialize logger
         self.logger = logging.getLogger(__name__)
         
@@ -91,8 +96,9 @@ class MainWindow(QMainWindow):
         self.setup_timers()
         self.apply_styles()
         
-        # Auto-create session on app launch
-        self.auto_create_session()
+        # Register session manager callbacks
+        self.session_manager.register_state_change_callback(self.update_session_ui)
+        self.session_manager.register_session_update_callback(self.update_session_stats)
         
         # Start monitoring by default
         self.start_system_monitoring()
@@ -145,23 +151,68 @@ class MainWindow(QMainWindow):
         parent_layout.addWidget(left_panel)
     
     def create_session_card(self, layout):
-        """Create session statistics card"""
+        """Create session statistics card with dual session support"""
         session_card = QFrame()
         session_card.setObjectName("sessionCard")
         card_layout = QVBoxLayout()
-        card_layout.setContentsMargins(16, 16, 16, 16)  # Reduced margins
-        card_layout.setSpacing(15)  # Reduced spacing
+        card_layout.setContentsMargins(16, 16, 16, 16)
+        card_layout.setSpacing(15)
         
         # Title
-        title_label = QLabel("Blink Session Details")
+        title_label = QLabel("Session Management")
         title_label.setObjectName("cardTitle")
         title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         
-        # Stats container - vertical layout
+        # Session type indicators
+        session_indicators_frame = QFrame()
+        indicators_layout = QHBoxLayout()
+        indicators_layout.setSpacing(8)
+        
+        # Local session indicator
+        self.local_indicator = QFrame()
+        self.local_indicator.setObjectName("sessionIndicator")
+        local_layout = QVBoxLayout()
+        local_layout.setContentsMargins(8, 8, 8, 8)
+        
+        local_title = QLabel("Local Session")
+        local_title.setObjectName("indicatorTitle")
+        local_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        
+        self.local_status = QLabel("Active")
+        self.local_status.setObjectName("indicatorStatus")
+        self.local_status.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        
+        local_layout.addWidget(local_title)
+        local_layout.addWidget(self.local_status)
+        self.local_indicator.setLayout(local_layout)
+        
+        # Cloud session indicator
+        self.cloud_indicator = QFrame()
+        self.cloud_indicator.setObjectName("sessionIndicator")
+        cloud_layout = QVBoxLayout()
+        cloud_layout.setContentsMargins(8, 8, 8, 8)
+        
+        cloud_title = QLabel("Cloud Session")
+        cloud_title.setObjectName("indicatorTitle")
+        cloud_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        
+        self.cloud_status = QLabel("Inactive")
+        self.cloud_status.setObjectName("indicatorStatus")
+        self.cloud_status.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        
+        cloud_layout.addWidget(cloud_title)
+        cloud_layout.addWidget(self.cloud_status)
+        self.cloud_indicator.setLayout(cloud_layout)
+        
+        indicators_layout.addWidget(self.local_indicator)
+        indicators_layout.addWidget(self.cloud_indicator)
+        session_indicators_frame.setLayout(indicators_layout)
+        
+        # Stats container
         stats_frame = QFrame()
         stats_layout = QVBoxLayout()
-        stats_layout.setSpacing(12)  # Reduced spacing for better fit
-        stats_layout.setContentsMargins(8, 8, 8, 8)  # Reduced margins to prevent truncation
+        stats_layout.setSpacing(12)
+        stats_layout.setContentsMargins(8, 8, 8, 8)
         
         # Blink count
         self.count_widget = self.create_stat_widget("0", "Blink Count")
@@ -179,24 +230,59 @@ class MainWindow(QMainWindow):
         
         # Control buttons
         controls_frame = QFrame()
-        controls_layout = QHBoxLayout()
+        controls_layout = QVBoxLayout()
         controls_layout.setSpacing(8)
         
-        self.start_btn = QPushButton("Start")
-        self.start_btn.setObjectName("startButton")
-        self.start_btn.clicked.connect(self.toggle_tracking)
+        # Eye tracking controls
+        tracking_controls_layout = QHBoxLayout()
+        tracking_controls_layout.setSpacing(8)
         
-        self.reset_btn = QPushButton("Reset")
+        self.start_tracking_btn = QPushButton("Start Tracking")
+        self.start_tracking_btn.setObjectName("startButton")
+        self.start_tracking_btn.clicked.connect(self.toggle_tracking)
+        
+        self.local_pause_btn = QPushButton("Pause Local")
+        self.local_pause_btn.setObjectName("localButton")
+        self.local_pause_btn.clicked.connect(self.pause_local_session)
+        self.local_pause_btn.setEnabled(False)
+        
+        tracking_controls_layout.addWidget(self.start_tracking_btn)
+        tracking_controls_layout.addWidget(self.local_pause_btn)
+        
+        # Cloud session controls
+        cloud_controls_layout = QHBoxLayout()
+        cloud_controls_layout.setSpacing(8)
+        
+        self.cloud_start_btn = QPushButton("Start Cloud")
+        self.cloud_start_btn.setObjectName("cloudButton")
+        self.cloud_start_btn.clicked.connect(self.toggle_cloud_session)
+        
+        self.cloud_pause_btn = QPushButton("Pause Cloud")
+        self.cloud_pause_btn.setObjectName("cloudButton")
+        self.cloud_pause_btn.clicked.connect(self.pause_cloud_session)
+        self.cloud_pause_btn.setEnabled(False)
+        
+        cloud_controls_layout.addWidget(self.cloud_start_btn)
+        cloud_controls_layout.addWidget(self.cloud_pause_btn)
+        
+        # Reset control
+        reset_layout = QHBoxLayout()
+        reset_layout.setSpacing(8)
+        
+        self.reset_btn = QPushButton("Reset All")
         self.reset_btn.setObjectName("resetButton")
-        self.reset_btn.clicked.connect(self.reset_session)
-        self.reset_btn.setEnabled(False)  # Disable until session starts
+        self.reset_btn.clicked.connect(self.reset_all_sessions)
         
-        controls_layout.addWidget(self.start_btn)
-        controls_layout.addWidget(self.reset_btn)
+        reset_layout.addWidget(self.reset_btn)
+        
+        controls_layout.addLayout(tracking_controls_layout)
+        controls_layout.addLayout(cloud_controls_layout)
+        controls_layout.addLayout(reset_layout)
         
         controls_frame.setLayout(controls_layout)
         
         card_layout.addWidget(title_label)
+        card_layout.addWidget(session_indicators_frame)
         card_layout.addWidget(stats_frame)
         card_layout.addWidget(controls_frame)
         
@@ -536,15 +622,162 @@ class MainWindow(QMainWindow):
         elif not self.system_monitor_thread.isRunning():
             self.system_monitor_thread.start_monitoring()
     
+    def toggle_cloud_session(self):
+        """Toggle cloud session on/off"""
+        if not self.session_manager.get_session_info(SessionType.CLOUD) or \
+           self.session_manager.get_session_info(SessionType.CLOUD).state == SessionState.INACTIVE:
+            # Start cloud session
+            if self.session_manager.start_cloud_session():
+                self.cloud_start_btn.setText("Stop Cloud")
+                self.cloud_pause_btn.setEnabled(True)
+                self.cloud_pause_btn.setText("Pause Cloud")
+                self.update_status("Cloud Active", "#17a2b8")
+            else:
+                QMessageBox.warning(self, "Authentication Required", 
+                                   "Please authenticate with Google to use cloud features.")
+        else:
+            # Stop cloud session
+            if self.session_manager.stop_session(SessionType.CLOUD):
+                self.cloud_start_btn.setText("Start Cloud")
+                self.cloud_pause_btn.setEnabled(False)
+                self.cloud_pause_btn.setText("Pause Cloud")
+                self.update_status("Local Only", "#28a745")
+    
+    def pause_cloud_session(self):
+        """Pause/resume cloud session"""
+        cloud_session = self.session_manager.get_session_info(SessionType.CLOUD)
+        if not cloud_session:
+            return
+        
+        if cloud_session.state == SessionState.ACTIVE:
+            if self.session_manager.pause_session(SessionType.CLOUD):
+                self.cloud_pause_btn.setText("Resume Cloud")
+                self.update_status("Cloud Paused", "#ffc107")
+        elif cloud_session.state == SessionState.PAUSED:
+            if self.session_manager.resume_session(SessionType.CLOUD):
+                self.cloud_pause_btn.setText("Pause Cloud")
+                self.update_status("Cloud Active", "#17a2b8")
+    
+    def pause_local_session(self):
+        """Pause/resume local session"""
+        local_session = self.session_manager.get_session_info(SessionType.LOCAL)
+        if not local_session:
+            return
+        
+        if local_session.state == SessionState.ACTIVE:
+            if self.session_manager.pause_session(SessionType.LOCAL):
+                self.local_pause_btn.setText("Resume Local")
+                self.update_status("Local Paused", "#ffc107")
+        elif local_session.state == SessionState.PAUSED:
+            if self.session_manager.resume_session(SessionType.LOCAL):
+                self.local_pause_btn.setText("Pause Local")
+                self.update_status("Local Active", "#28a745")
+    
+    def reset_all_sessions(self):
+        """Reset all sessions"""
+        reply = QMessageBox.question(self, "Reset Sessions", 
+                                   "Are you sure you want to reset all sessions?\n\nThis will end current sessions and start new ones.",
+                                   QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+        
+        if reply == QMessageBox.StandardButton.Yes:
+            # Stop eye tracking if active
+            if self.is_tracking:
+                self.stop_tracking()
+            
+            # Reset local session
+            self.session_manager.reset_session(SessionType.LOCAL)
+            
+            # Reset cloud session if active
+            if self.session_manager.get_session_info(SessionType.CLOUD):
+                self.session_manager.reset_session(SessionType.CLOUD)
+                self.cloud_start_btn.setText("Start Cloud")
+                self.cloud_pause_btn.setEnabled(False)
+                self.cloud_pause_btn.setText("Pause Cloud")
+            
+            # Reset UI
+            self.count_widget.value_label.setText("0")
+            self.rate_widget.value_label.setText("0.0")
+            self.time_widget.value_label.setText("00:00:00")
+            
+            self.update_status("Sessions Reset", "#6c757d")
+    
+    def update_session_ui(self):
+        """Update session UI indicators"""
+        # Update local session indicator
+        local_session = self.session_manager.get_session_info(SessionType.LOCAL)
+        if local_session:
+            if local_session.state == SessionState.ACTIVE:
+                self.local_status.setText("Active")
+                self.local_status.setStyleSheet("color: #28a745; font-weight: bold;")
+                self.local_pause_btn.setText("Pause Local")
+            elif local_session.state == SessionState.PAUSED:
+                self.local_status.setText("Paused")
+                self.local_status.setStyleSheet("color: #ffc107; font-weight: bold;")
+                self.local_pause_btn.setText("Resume Local")
+            else:
+                self.local_status.setText("Inactive")
+                self.local_status.setStyleSheet("color: #6c757d;")
+        else:
+            self.local_status.setText("Inactive")
+            self.local_status.setStyleSheet("color: #6c757d;")
+        
+        # Update cloud session indicator
+        cloud_session = self.session_manager.get_session_info(SessionType.CLOUD)
+        if cloud_session:
+            if cloud_session.state == SessionState.ACTIVE:
+                self.cloud_status.setText("Active")
+                self.cloud_status.setStyleSheet("color: #17a2b8; font-weight: bold;")
+                self.cloud_start_btn.setText("Stop Cloud")
+                self.cloud_pause_btn.setEnabled(True)
+            elif cloud_session.state == SessionState.PAUSED:
+                self.cloud_status.setText("Paused")
+                self.cloud_status.setStyleSheet("color: #ffc107; font-weight: bold;")
+                self.cloud_start_btn.setText("Stop Cloud")
+                self.cloud_pause_btn.setEnabled(True)
+                self.cloud_pause_btn.setText("Resume Cloud")
+            else:
+                self.cloud_status.setText("Inactive")
+                self.cloud_status.setStyleSheet("color: #6c757d;")
+                self.cloud_start_btn.setText("Start Cloud")
+                self.cloud_pause_btn.setEnabled(False)
+        else:
+            self.cloud_status.setText("Inactive")
+            self.cloud_status.setStyleSheet("color: #6c757d;")
+            self.cloud_start_btn.setText("Start Cloud")
+            self.cloud_pause_btn.setEnabled(False)
+    
+    def update_session_stats(self):
+        """Update session statistics display"""
+        summary = self.session_manager.get_session_summary()
+        
+        # Update blink count (use local session data)
+        total_blinks = summary['local_session']['total_blinks']
+        self.count_widget.value_label.setText(str(total_blinks))
+        
+        # Update blink rate (use local session data)
+        blink_rate = summary['local_session']['blink_rate']
+        self.rate_widget.value_label.setText(f"{blink_rate:.1f}")
+        
+        # Update session time (use local session duration)
+        duration = summary['local_session']['duration']
+        hours, remainder = divmod(duration, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        time_str = f"{int(hours):02d}:{int(minutes):02d}:{int(seconds):02d}"
+        self.time_widget.value_label.setText(time_str)
+    
     def toggle_tracking(self):
         """Toggle eye tracking on/off"""
         if not self.eye_tracker:
+            # Start eye tracking
             self.start_tracking()
         elif self.is_tracking and not self.eye_tracker.paused:
+            # Pause eye tracking
             self.pause_tracking()
         elif self.eye_tracker.paused:
+            # Resume eye tracking
             self.resume_tracking()
         else:
+            # Stop eye tracking
             self.stop_tracking()
     
     def start_tracking(self):
@@ -559,30 +792,12 @@ class MainWindow(QMainWindow):
         self.eye_tracker.start_tracking()
         # Don't start timer yet - wait for camera initialization
         self.is_tracking = True
-        self.start_btn.setText("Pause")
-        self.reset_btn.setEnabled(True)  # Enable reset button
+        self.start_tracking_btn.setText("Stop Tracking")
+        self.local_pause_btn.setEnabled(True)
         self.update_status("Live", "#28a745")
         
-        # TODO: Real implementation
-        """
-        REAL IMPLEMENTATION PLACEHOLDER:
-        
-        from desktop.eye_tracker import EyeTracker
-        from desktop.database.sqlite_manager import SQLiteManager
-        
-        # Start local session
-        self.db_manager = SQLiteManager()
-        self.local_session_id = self.db_manager.create_session()
-        
-        # Start cloud session if authenticated
-        if self.user_data.get('access_token'):
-            # API call to start cloud session
-            pass
-        
-        # Initialize real eye tracker
-        self.eye_tracker = EyeTracker()
-        self.eye_tracker.start()
-        """
+        # Update session UI to reflect current state
+        self.update_session_ui()
     
     def pause_tracking(self):
         """Pause eye tracking"""
@@ -590,8 +805,7 @@ class MainWindow(QMainWindow):
             self.eye_tracker.pause_tracking()
         
         self.session_timer.stop()
-        self.start_btn.setText("Resume")
-        self.reset_btn.setEnabled(True)  # Keep reset enabled when paused
+        self.start_tracking_btn.setText("Resume Tracking")
         self.update_status("Paused", "#ffc107")
         
         # Show notification
@@ -607,7 +821,7 @@ class MainWindow(QMainWindow):
         # Resume timer if it was active
         if self.session_start_time and not self.session_timer.isActive():
             self.session_timer.start(1000)  # Update every second
-        self.start_btn.setText("Pause")
+        self.start_tracking_btn.setText("Stop Tracking")
         self.update_status("Live", "#28a745")
         
         # Show notification
@@ -644,9 +858,9 @@ class MainWindow(QMainWindow):
         
         self.session_timer.stop()
         self.is_tracking = False
-        self.start_btn.setText("Start")
-        self.reset_btn.setEnabled(False)  # Disable reset button
-        self.update_status("Inactive", "#6c757d")  # Changed to "Inactive"
+        self.start_tracking_btn.setText("Start Tracking")
+        self.local_pause_btn.setEnabled(False)
+        self.update_status("Inactive", "#6c757d")
         
         # Show notification
         if self.tray_icon:
@@ -667,17 +881,12 @@ class MainWindow(QMainWindow):
         
         QMessageBox.information(self, "Session Reset", "Session data has been reset.")
     
-    def auto_create_session(self):
-        """Auto-create session when app launches"""
-        try:
-            session_id = self.db_manager.auto_create_session()
-            self.logger.info(f"Auto-created session with ID: {session_id}")
-        except Exception as e:
-            self.logger.error(f"Error auto-creating session: {e}")
+
     
     def update_blink_stats(self, count, rate):
         """Update blink statistics display and log to database"""
-        self.count_widget.value_label.setText(str(count))
+        # Update session manager with new stats
+        self.session_manager.update_session_stats(count, rate)
         
         # Log blink data to database in real-time
         if self.db_manager and self.is_tracking:
@@ -695,18 +904,14 @@ class MainWindow(QMainWindow):
     
     def update_session_time(self):
         """Update session elapsed time and blink rate"""
-        if self.session_start_time:
-            elapsed = datetime.now() - self.session_start_time
-            hours, remainder = divmod(elapsed.total_seconds(), 3600)
-            minutes, seconds = divmod(remainder, 60)
-            time_str = f"{int(hours):02d}:{int(minutes):02d}:{int(seconds):02d}"
-            self.time_widget.value_label.setText(time_str)
-            
-            # Update blink rate every second based on elapsed time
-            if self.eye_tracker:
-                stats = self.eye_tracker.get_session_stats()
-                blink_rate = stats.get('blink_rate', 0.0)
-                self.rate_widget.value_label.setText(f"{blink_rate:.1f}")
+        # Update session stats from session manager
+        self.update_session_stats()
+        
+        # Update blink rate every second based on elapsed time
+        if self.eye_tracker:
+            stats = self.eye_tracker.get_session_stats()
+            blink_rate = stats.get('blink_rate', 0.0)
+            self.rate_widget.value_label.setText(f"{blink_rate:.1f}")
     
     @pyqtSlot(dict)
     def update_performance_stats(self, stats):
@@ -789,7 +994,6 @@ class MainWindow(QMainWindow):
             self.update_status("Live", "#28a745")
             # Start timer only when camera is ready and tracking starts
             if self.is_tracking and not self.session_timer.isActive():
-                self.session_start_time = datetime.now()
                 self.session_timer.start(1000)  # Update every second
                 self.logger.info("Session timer started - camera initialized")
             # Show notification only after camera is initialized and tracking starts
@@ -918,6 +1122,10 @@ class MainWindow(QMainWindow):
         """Properly quit the application"""
         self.logger.info("Application quit requested")
         
+        # Clean up session manager
+        if self.session_manager:
+            self.session_manager.cleanup()
+        
         # End current session in database
         if self.db_manager:
             try:
@@ -960,6 +1168,10 @@ class MainWindow(QMainWindow):
             # Stop tracking if active
             if self.is_tracking:
                 self.stop_tracking()
+            
+            # Clean up session manager
+            if self.session_manager:
+                self.session_manager.cleanup()
             
             # End current session in database
             if self.db_manager:
