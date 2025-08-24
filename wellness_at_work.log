@@ -1,0 +1,479 @@
+2025-08-24 15:24:21,159 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:24:21,198 - __main__ - ERROR - Failed to start application: MainWindow.__init__() missing 1 required positional argument: 'user_data'
+2025-08-24 15:33:40,476 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:33:40,523 - __main__ - ERROR - Failed to start application: MainWindow.__init__() missing 1 required positional argument: 'user_data'
+2025-08-24 15:35:27,199 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:35:27,249 - __main__ - ERROR - Failed to start application: 'name'
+2025-08-24 15:38:00,644 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:38:00,692 - __main__ - ERROR - Failed to start application: 'name'
+2025-08-24 15:42:20,980 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:42:21,489 - __main__ - INFO - Application started successfully
+2025-08-24 15:42:24,745 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 15:42:39,766 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 15:42:41,993 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 15:43:01,436 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 15:43:21,629 - desktop.eye_tracker - ERROR - Tracking error: 'numpy.timedelta64' object has no attribute 'total_seconds'
+2025-08-24 15:43:23,462 - desktop.main_window - ERROR - Eye tracking error: Tracking error: 'numpy.timedelta64' object has no attribute 'total_seconds'
+2025-08-24 15:43:29,521 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 15:43:30,591 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 15:43:50,062 - desktop.eye_tracker - ERROR - Tracking error: 'numpy.timedelta64' object has no attribute 'total_seconds'
+2025-08-24 15:43:52,806 - desktop.main_window - ERROR - Eye tracking error: Tracking error: 'numpy.timedelta64' object has no attribute 'total_seconds'
+2025-08-24 15:46:49,900 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:46:50,483 - __main__ - INFO - Application started successfully
+2025-08-24 15:46:56,259 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 15:54:22,348 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 15:54:22,898 - __main__ - INFO - Application started successfully
+2025-08-24 15:56:31,778 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 15:56:50,862 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 15:56:53,794 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 15:56:54,261 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 15:56:54,545 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 15:56:54,947 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 15:56:55,386 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 15:56:55,772 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 15:56:56,211 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 15:56:56,612 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 15:56:57,048 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 15:56:57,409 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 15:56:57,809 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 15:56:58,237 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 15:56:58,740 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 15:56:59,536 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 15:57:00,003 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 16
+2025-08-24 15:57:00,543 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 17
+2025-08-24 15:57:01,280 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 18
+2025-08-24 15:57:01,651 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 19
+2025-08-24 15:57:02,039 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 20
+2025-08-24 15:57:02,833 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 21
+2025-08-24 15:57:03,182 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 22
+2025-08-24 15:57:03,535 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 23
+2025-08-24 15:57:03,885 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 24
+2025-08-24 15:57:04,274 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 25
+2025-08-24 15:57:04,743 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 26
+2025-08-24 15:57:05,568 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 27
+2025-08-24 15:57:08,645 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 15:57:15,909 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 15:57:34,277 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 15:57:35,139 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 15:57:43,982 - desktop.main_window - INFO - Application quit requested
+2025-08-24 15:57:43,983 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 16:03:18,362 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 16:03:18,895 - __main__ - INFO - Application started successfully
+2025-08-24 16:03:22,405 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 16:03:41,178 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:03:41,820 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:03:43,062 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:03:43,684 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:03:44,483 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:03:46,458 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 16:03:47,553 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 16:03:48,135 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 16:03:48,831 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 16:03:52,221 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:03:56,905 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:03:57,772 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 16:03:58,423 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 16:04:00,719 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:04:04,857 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:04:05,516 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 16:04:06,031 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 16:04:06,635 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 16:04:07,275 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 16:04:09,066 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 16
+2025-08-24 16:04:09,630 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 17
+2025-08-24 16:04:10,096 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 18
+2025-08-24 16:04:10,880 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 19
+2025-08-24 16:04:11,706 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 20
+2025-08-24 16:04:12,034 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 21
+2025-08-24 16:04:15,686 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 22
+2025-08-24 16:04:16,343 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 23
+2025-08-24 16:04:16,971 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 24
+2025-08-24 16:04:19,265 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 25
+2025-08-24 16:04:19,560 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 26
+2025-08-24 16:04:20,293 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 27
+2025-08-24 16:04:22,740 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 28
+2025-08-24 16:04:23,339 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 29
+2025-08-24 16:04:24,008 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 30
+2025-08-24 16:04:24,286 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 31
+2025-08-24 16:04:25,125 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 32
+2025-08-24 16:04:30,340 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 33
+2025-08-24 16:04:30,681 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 34
+2025-08-24 16:04:33,825 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 35
+2025-08-24 16:04:34,402 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 36
+2025-08-24 16:04:34,917 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 37
+2025-08-24 16:04:35,498 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 38
+2025-08-24 16:04:36,609 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:04:37,929 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 16:04:50,635 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:04:51,951 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:04:52,153 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:04:53,135 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:04:53,793 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:04:53,933 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:04:54,729 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 16:04:55,525 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 16:04:56,239 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 16:05:01,249 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 16:05:04,257 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 16:05:04,864 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 16:05:09,227 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 16:05:19,463 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:05:19,464 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 16:05:19,478 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:09:30,211 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 16:09:30,797 - __main__ - INFO - Application started successfully
+2025-08-24 16:09:40,681 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 16:10:02,766 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:10:03,452 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:10:04,193 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:10:04,876 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:10:05,500 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:10:06,125 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 16:10:06,371 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 16:10:06,559 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 16:10:06,777 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 16:10:07,369 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 16:10:07,700 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 16:10:08,037 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 16:10:08,479 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 16:10:08,944 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 16:10:09,240 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 16:10:09,677 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 16
+2025-08-24 16:10:09,862 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 17
+2025-08-24 16:10:10,139 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 18
+2025-08-24 16:10:10,574 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 19
+2025-08-24 16:10:10,855 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 20
+2025-08-24 16:10:12,543 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:10:17,978 - desktop.eye_tracker - INFO - Camera display set to: OFF
+2025-08-24 16:10:17,978 - desktop.main_window - INFO - Camera display toggled: OFF
+2025-08-24 16:10:22,153 - desktop.eye_tracker - INFO - Camera display set to: ON
+2025-08-24 16:10:22,153 - desktop.main_window - INFO - Camera display toggled: ON
+2025-08-24 16:10:24,783 - desktop.eye_tracker - INFO - Camera display set to: OFF
+2025-08-24 16:10:24,785 - desktop.main_window - INFO - Camera display toggled: OFF
+2025-08-24 16:10:25,577 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:10:29,417 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 21
+2025-08-24 16:10:30,146 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 22
+2025-08-24 16:10:30,800 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 23
+2025-08-24 16:10:31,363 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 24
+2025-08-24 16:10:32,199 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:10:34,484 - desktop.eye_tracker - INFO - Camera display set to: ON
+2025-08-24 16:10:34,484 - desktop.main_window - INFO - Camera display toggled: ON
+2025-08-24 16:10:50,106 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:10:50,107 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 16:14:58,856 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 16:14:59,451 - __main__ - INFO - Application started successfully
+2025-08-24 16:15:03,396 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 16:15:23,470 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:15:24,204 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:15:24,833 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:15:25,767 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:15:26,433 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:15:27,314 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 16:15:27,845 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 16:15:28,559 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 16:15:29,352 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 16:15:32,828 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 16:15:33,621 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 16:15:42,093 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 16:15:46,904 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 16:15:48,196 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 16:15:48,913 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 16:15:51,207 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 16
+2025-08-24 16:15:52,241 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 17
+2025-08-24 16:15:54,501 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 18
+2025-08-24 16:15:59,917 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 19
+2025-08-24 16:16:03,113 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:16:04,845 - desktop.eye_tracker - INFO - Camera hardware turned OFF
+2025-08-24 16:16:04,847 - desktop.main_window - INFO - Camera hardware toggled: OFF
+2025-08-24 16:16:06,699 - desktop.main_window - ERROR - Eye tracking error: Failed to capture frame
+2025-08-24 16:16:27,014 - desktop.eye_tracker - INFO - Camera hardware turned ON
+2025-08-24 16:16:27,015 - desktop.main_window - INFO - Camera hardware toggled: ON
+2025-08-24 16:17:46,914 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:19:01,641 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 16:19:02,488 - __main__ - INFO - Application started successfully
+2025-08-24 16:20:24,763 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 16:20:43,304 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:20:43,815 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:20:44,358 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:20:44,919 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:20:45,482 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:20:46,927 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 16:20:47,670 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 16:20:48,309 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 16:20:48,938 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 16:20:49,353 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 16:20:49,775 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 16:20:50,007 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 16:20:50,527 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 16:20:51,508 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 16:20:51,929 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 16:20:52,116 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 16
+2025-08-24 16:20:52,320 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 17
+2025-08-24 16:20:52,560 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 18
+2025-08-24 16:20:53,064 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 19
+2025-08-24 16:20:55,063 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:20:59,372 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:21:00,230 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 20
+2025-08-24 16:21:00,837 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 21
+2025-08-24 16:21:01,354 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 22
+2025-08-24 16:21:01,854 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 23
+2025-08-24 16:21:02,457 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 24
+2025-08-24 16:21:02,879 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 25
+2025-08-24 16:21:03,650 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 16:21:05,992 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:21:06,649 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:21:07,214 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:21:07,875 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:21:10,027 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:21:11,046 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:21:11,903 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 16:21:21,657 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:21:21,658 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 16:25:03,057 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 16:25:03,613 - __main__ - INFO - Application started successfully
+2025-08-24 16:26:28,899 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 16:26:46,144 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 16:26:47,953 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:26:48,547 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:26:48,938 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:26:49,545 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:26:50,079 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:26:56,918 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 16:27:04,654 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 16:27:04,665 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 16:27:06,222 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 16:27:09,462 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 16:27:13,876 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:27:14,670 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:27:15,530 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:27:23,797 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:27:23,798 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 16:27:23,814 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:30:30,207 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 16:30:30,743 - __main__ - INFO - Application started successfully
+2025-08-24 16:30:44,359 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 16:31:01,432 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 16:31:03,593 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 16:31:04,045 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 16:31:04,481 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 16:31:04,898 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 16:31:05,413 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 16:31:05,974 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 16:31:06,504 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 16:31:07,023 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 16:31:07,617 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 16:31:10,591 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 16:31:16,849 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 16:31:19,405 - desktop.main_window - INFO - Application quit requested
+2025-08-24 16:31:19,406 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 16:31:19,421 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:04:09,718 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 17:04:10,335 - __main__ - INFO - Application started successfully
+2025-08-24 17:04:13,369 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 17:04:31,183 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:04:33,261 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:04:34,128 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:04:36,168 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:04:38,242 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:04:38,899 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:04:39,601 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 17:04:40,372 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 17:04:40,984 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 17:04:42,532 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 17:04:43,060 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 17:04:43,840 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 17:04:47,006 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 17:04:53,326 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:04:53,334 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 17:04:54,369 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 17:04:55,139 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 17:04:56,495 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 17:04:57,386 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 17:05:00,611 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:05:01,262 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:05:02,045 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:05:04,256 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:05:04,767 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:05:08,581 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 17:05:24,530 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:19:30,959 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 17:19:31,009 - desktop.database.sqlite_manager - INFO - Database initialized successfully
+2025-08-24 17:19:31,010 - desktop.database.sqlite_manager - INFO - Using existing active session 4
+2025-08-24 17:19:31,777 - __main__ - INFO - Application started successfully
+2025-08-24 17:22:40,529 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 17:22:40,529 - desktop.main_window - INFO - Eye tracking started with database integration
+2025-08-24 17:22:59,412 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:23:01,342 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:23:01,854 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:23:02,472 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:23:03,624 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:23:04,135 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:23:04,778 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 17:23:05,297 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 17:23:05,441 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 17:23:05,818 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 17:23:06,328 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 17:23:06,991 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 17:23:07,795 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 17:23:08,199 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 17:23:08,938 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 17:23:09,449 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 17:23:12,837 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:23:12,838 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 17:23:12,847 - desktop.database.sqlite_manager - INFO - Ended session 4
+2025-08-24 17:23:12,847 - desktop.main_window - INFO - Database session ended
+2025-08-24 17:23:12,871 - desktop.database.sqlite_manager - INFO - Ended session 4
+2025-08-24 17:23:12,875 - desktop.database.sqlite_manager - INFO - Cleaned up 0 old records
+2025-08-24 17:23:12,876 - desktop.database.sqlite_manager - INFO - Database manager closed
+2025-08-24 17:23:12,876 - desktop.main_window - INFO - Database connection closed
+2025-08-24 17:23:12,882 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:23:12,891 - desktop.database.sqlite_manager - INFO - Ended session 4
+2025-08-24 17:23:12,895 - desktop.database.sqlite_manager - INFO - Cleaned up 0 old records
+2025-08-24 17:23:12,896 - desktop.database.sqlite_manager - INFO - Database manager closed
+2025-08-24 17:23:12,896 - desktop.main_window - INFO - Database connection closed
+2025-08-24 17:28:49,639 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 17:28:49,702 - desktop.database.sqlite_manager - INFO - Database initialized successfully
+2025-08-24 17:28:49,705 - desktop.database.sqlite_manager - INFO - Using existing active session 1
+2025-08-24 17:28:50,482 - __main__ - INFO - Application started successfully
+2025-08-24 17:29:39,367 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 17:29:39,367 - desktop.main_window - INFO - Eye tracking started with database integration
+2025-08-24 17:29:58,636 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:29:59,623 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:00,315 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:30:00,317 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:00,623 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:30:00,626 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:00,628 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:01,226 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:30:01,228 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:01,643 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:02,642 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:03,547 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:30:03,549 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:03,666 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:04,202 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:30:04,205 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:04,655 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:04,802 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 17:30:04,804 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:05,658 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:05,663 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 17:30:05,666 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:06,425 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 17:30:06,428 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:06,665 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:07,119 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 17:30:07,121 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:07,660 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:07,922 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 17:30:07,924 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:08,592 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 17:30:08,595 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:08,659 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:09,310 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 17:30:09,312 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:09,656 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:09,989 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 17:30:09,991 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:10,668 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:11,659 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:12,657 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:13,381 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 17:30:13,384 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:13,655 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:14,113 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 15
+2025-08-24 17:30:14,115 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:14,391 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 16
+2025-08-24 17:30:14,393 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:14,579 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 17
+2025-08-24 17:30:14,581 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:14,665 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:14,966 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 18
+2025-08-24 17:30:14,968 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:15,384 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 19
+2025-08-24 17:30:15,386 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:15,572 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 20
+2025-08-24 17:30:15,574 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:15,658 - desktop.main_window - ERROR - Failed to get session stats: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:16,003 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 21
+2025-08-24 17:30:16,006 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:16,204 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 22
+2025-08-24 17:30:16,206 - desktop.main_window - ERROR - Failed to log blink to database: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:16,256 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:30:16,257 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 17:30:16,260 - desktop.main_window - ERROR - Failed to end database session: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:16,290 - desktop.database.sqlite_manager - ERROR - Error during database close: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+2025-08-24 17:30:16,291 - desktop.main_window - INFO - Database connection closed
+2025-08-24 17:30:16,298 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:46:38,080 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 17:46:38,119 - desktop.database.sqlite_manager - INFO - Database tables and indexes created
+2025-08-24 17:46:38,120 - desktop.database.sqlite_manager - INFO - Background blink processing started
+2025-08-24 17:46:38,120 - desktop.database.sqlite_manager - INFO - SQLite manager initialized with database: eye_tracker.db
+2025-08-24 17:46:38,159 - desktop.database.sqlite_manager - INFO - Auto-created new session: 1
+2025-08-24 17:46:38,159 - desktop.main_window - INFO - Auto-created session with ID: 1
+2025-08-24 17:46:38,622 - __main__ - INFO - Application started successfully
+2025-08-24 17:46:48,670 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 17:47:05,997 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:47:07,686 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:47:08,416 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:47:08,760 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:47:09,133 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:47:16,047 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:47:17,147 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 17:47:18,209 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 17:47:18,825 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 17:47:24,927 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 17:47:25,067 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 17:47:25,719 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 17:47:27,589 - desktop.eye_tracker - INFO - Eye tracking paused
+2025-08-24 17:47:30,143 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:47:30,154 - desktop.eye_tracker - INFO - Eye tracking resumed
+2025-08-24 17:47:32,065 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 17:47:32,252 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 17:47:32,438 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 14
+2025-08-24 17:47:33,488 - desktop.eye_tracker - INFO - Session reset
+2025-08-24 17:47:34,811 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:47:37,142 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:47:39,429 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:47:39,853 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:47:40,811 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:47:43,571 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 17:47:44,946 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 17:47:46,729 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 8
+2025-08-24 17:47:47,010 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 9
+2025-08-24 17:47:47,154 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 10
+2025-08-24 17:47:47,386 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 11
+2025-08-24 17:47:47,708 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 12
+2025-08-24 17:47:47,989 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 13
+2025-08-24 17:47:50,573 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:47:50,573 - desktop.database.sqlite_manager - INFO - Session 1 ended with 13 blinks
+2025-08-24 17:47:50,573 - desktop.main_window - INFO - Session ended: 13 blinks recorded
+2025-08-24 17:47:50,574 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 17:47:51,069 - desktop.database.sqlite_manager - INFO - SQLite manager closed
+2025-08-24 17:47:51,075 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:47:51,075 - desktop.database.sqlite_manager - INFO - SQLite manager closed
+2025-08-24 17:47:51,096 - desktop.database.sqlite_manager - INFO - SQLite manager closed
+2025-08-24 17:49:51,082 - __main__ - INFO - Starting Wellness at Work v1.0.0
+2025-08-24 17:49:51,128 - desktop.database.sqlite_manager - INFO - Database tables and indexes created
+2025-08-24 17:49:51,129 - desktop.database.sqlite_manager - INFO - Background blink processing started
+2025-08-24 17:49:51,129 - desktop.database.sqlite_manager - INFO - SQLite manager initialized with database: eye_tracker.db
+2025-08-24 17:49:51,171 - desktop.database.sqlite_manager - INFO - Auto-created new session: 2
+2025-08-24 17:49:51,171 - desktop.main_window - INFO - Auto-created session with ID: 2
+2025-08-24 17:49:51,647 - __main__ - INFO - Application started successfully
+2025-08-24 17:49:56,388 - desktop.eye_tracker - INFO - Eye tracking started
+2025-08-24 17:50:13,496 - desktop.main_window - INFO - Session timer started - camera initialized
+2025-08-24 17:50:14,429 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 1
+2025-08-24 17:50:15,417 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 2
+2025-08-24 17:50:15,725 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 3
+2025-08-24 17:50:16,211 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 4
+2025-08-24 17:50:27,543 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 5
+2025-08-24 17:50:28,566 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 6
+2025-08-24 17:50:31,625 - desktop.eye_tracker - INFO - BLINK DETECTED! Total blinks: 7
+2025-08-24 17:50:42,087 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:50:42,088 - desktop.database.sqlite_manager - INFO - Session 2 ended with 7 blinks
+2025-08-24 17:50:42,088 - desktop.main_window - INFO - Session ended: 7 blinks recorded
+2025-08-24 17:50:42,089 - desktop.eye_tracker - INFO - Eye tracking stopped
+2025-08-24 17:50:42,373 - desktop.database.sqlite_manager - INFO - SQLite manager closed
+2025-08-24 17:50:42,377 - desktop.main_window - INFO - Application quit requested
+2025-08-24 17:50:42,379 - desktop.database.sqlite_manager - INFO - SQLite manager closed
+2025-08-24 17:50:42,390 - desktop.database.sqlite_manager - INFO - SQLite manager closed
