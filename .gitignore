@@ -64,3 +64,4 @@ config.py
 auth_config.json
 auth_tokens.db
 nonexistent_config.json
+auth.py 
